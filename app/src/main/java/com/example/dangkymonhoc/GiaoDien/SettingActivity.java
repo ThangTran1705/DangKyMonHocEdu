@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class SettingActivity extends AppCompatActivity {
     private RequestQueue tQueue;
-    TextView tvMssv,tvTenSV,tvUserSV,tvEditPass,tvLanguage;
+    TextView tvMssv,tvTenSV,tvUserSV,tvEditPass,tvLanguage,tvThoat;
     int IdSV;
     String maSV, TenSinhVien;
     @Override
@@ -37,6 +37,7 @@ public class SettingActivity extends AppCompatActivity {
         tvUserSV = findViewById(R.id.tvUser);
         tvLanguage= findViewById(R.id.tvLanguage);
         tvEditPass = findViewById(R.id.tvEditPassword);
+        tvThoat = findViewById(R.id.tvThoat);
         Intent intent = getIntent();
         maSV = intent.getStringExtra("maSV");
         Log.d("AAA",maSV);
@@ -63,6 +64,14 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(SettingActivity.this, UserActivity.class);
                 i.putExtra("maSV",maSV);
+                startActivity(i);
+
+            }
+        });
+        tvThoat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SettingActivity.this, SplashActivity.class);
                 startActivity(i);
 
             }
