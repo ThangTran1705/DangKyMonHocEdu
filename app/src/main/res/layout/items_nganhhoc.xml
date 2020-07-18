@@ -21,7 +21,7 @@
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             android:maxWidth="70dp"
-            android:layout_margin="10dp"
+            android:layout_margin="15dp"
             app:srcCompat="@drawable/dangky" />
 
     </androidx.cardview.widget.CardView>
